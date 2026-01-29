@@ -72,6 +72,10 @@ body::-webkit-scrollbar{
     animation: zoom_in_out 0.7s ease-in-out forwards;
 }
 
+.rotate{
+  animation: rotate 1.5s linear infinite forwards;
+}
+
 
 @keyframes zoom_in_out {
     0% {
@@ -83,4 +87,13 @@ body::-webkit-scrollbar{
     100% {
         transform: scale(100%);
     }
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
 }

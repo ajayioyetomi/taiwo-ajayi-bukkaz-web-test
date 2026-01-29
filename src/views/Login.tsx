@@ -1,5 +1,17 @@
+import { useEffect } from "react";
 import Logo from "../assets/logo.svg?react";
+import {Loading} from '../modals';
+import { usePopup } from "../hooks/usePopup";
 const Login = () => {
+  const {setPopUp, setOpen} = usePopup();
+  useEffect(()=>{
+    let simulate_loading = setTimeout(()=>{
+      setPopUp(<Loading message="Waiting for confirmation on your phone" />, false);
+      setOpen(true);
+      clearTimeout(simulate_loading);
+    },3000)
+  },[])
+
   return (
     <main className="zoom-in-out p-4 sm:p-2 min-h-screen h-full sm:h-screen w-screen bg-black flex flex-col justify-center items-center">
 
