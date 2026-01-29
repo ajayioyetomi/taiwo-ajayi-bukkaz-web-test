@@ -1,3 +1,29 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *, [dark]));
+
+@theme{
+  --color-black:#000000;
+  --color-white:#FFFFFF;
+  --color-blue-100: #CEC4FC;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-black:#000000;
+    --color-white:#FFFFFF;
+  }
+}
+
+.login-list {
+  list-style-type: decimal;
+  & > li::marker{
+      color: var(--color-white);
+      padding-right: 10px;
+  }
+  & > li{
+    margin:0 0 .5rem .5rem;
+  }
+}
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -16,9 +42,6 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--color-black);
 }
 
-
-@media (prefers-color-scheme: light) {
-
-}
