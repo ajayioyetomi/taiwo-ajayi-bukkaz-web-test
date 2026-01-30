@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Logo from "../assets/logo.svg?react";
+import Logo from "../assets/big-logo.svg?react";
 import {Loading, LoginErrorModal} from '../modals';
 import { usePopup } from "../hooks/usePopup";
 const Login = () => {
