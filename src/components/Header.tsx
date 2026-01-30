@@ -120,7 +120,7 @@ const Header = () => {
         link.type === "link"?
         <Link className="text-gray-600" key={link.name} to={link.href}>{link.label}</Link> :
         <div className="relative z-10" key={link.name}>
-          <Button className="sub-list" onClick={()=>handleClickDropDrop(link.name)}>{link.label}</Button>
+          <Button className="sub-list text-gray-600" onClick={()=>handleClickDropDrop(link.name)}>{link.label}</Button>
           <ul className={`${active_index === link.name ? 'grid' :'hidden'} sub-list grid-cols-2 min-w-100 bg-gray-800 absolute z-10 top-8 p-2`}>
             {link.subLinks?.map((eachSubLink:SubLinkType) =>
             <li key={eachSubLink.id} className="w-[calc(50% - 10px)] p-2 sub-list">
