@@ -5,7 +5,9 @@
     { "path": "./tsconfig.node.json" }
   ],
    "compilerOptions": {
-    "moduleResolution": "node"
-  }
+    "moduleResolution": "node",
+    "types": ["vitest/globals"]
+  },
+  
 
 }
