@@ -10,6 +10,7 @@
   --color-gray-500: #333333;
   --gradient: linear-gradient(93.67deg, #6142F6 0%, #9C2BDC 66.29%, #FF2468 100%);
   --rate-gradient: linear-gradient(180deg, #CEC4FC 0%, #D7C1F8 50%, #FFBBD0 100%);
+  --color-gray-800: #1C1C1C;
 }
 @media (prefers-color-scheme: dark) {
   :root {

@@ -7,8 +7,8 @@ type MainType = {
 }
 const MainScreen = ({children}:MainType) => {
   return (
-    <main className='fixed left-0 top-0 w-screen h-screen flex flex-col'>
-        <header className='w-full sticky top-0'>
+    <main className='fixed z-10 left-0 top-0 w-screen h-screen flex flex-col'>
+        <header className='w-full sticky top-0 left-0 z-10 bg-black'>
             <Header />
         </header>
         <section className='main-scroll flex-1 max-h-[calc(100% - 71px)] overflow-x-clip overflow-y-auto'>

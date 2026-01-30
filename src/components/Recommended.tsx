@@ -79,7 +79,6 @@ const Recommended = () => {
 								loop
 								navigation
 								onSwiper={(swiper) => (swiperRef.current = swiper)}
-								onSlideChange={() => console.log('slide change')}
 								className='overflow-visible'
 								>
 								{recommendationList.map((eachRecommendation: RecommendedType) =>

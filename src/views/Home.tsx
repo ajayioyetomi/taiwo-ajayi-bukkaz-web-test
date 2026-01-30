@@ -139,8 +139,6 @@ const Home = () => {
           scrollbar={{ draggable: true }}
           loop={true}
           autoplay={{delay:3000,disableOnInteraction:true}}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log('slide change')}
           className='banner-swiper'
         >
           {
@@ -165,18 +163,18 @@ const Home = () => {
                         </p>
                         <ul className='banner-genre-list text-gray-600 list-none flex w-fit gap-2 text-sm'>
                           {eachSlide.genres.map((eachGenre:string) =>
-                            <li className='flex relative gap-2'>{eachGenre}</li>
+                            <li className='flex relative gap-2' key={eachGenre}>{eachGenre}</li>
                             )}
                         </ul>
                         <div className='flex items-center'>
                           <ul className='flex m-0'>
-                            {positive_rating.map(()=>
-                            <li><PostiveStar /></li>
+                            {positive_rating.map((e:number)=>
+                            <li key={e}><PostiveStar /></li>
                             ).slice(5 - eachSlide.review_rating)}
                           </ul>
                           <ul className='flex m-0'>
-                            {positive_rating.map(()=>
-                            <li><NegativeStar /></li>
+                            {positive_rating.map((e:number)=>
+                            <li key={e}><NegativeStar /></li>
                             ).slice(eachSlide.review_rating)}
                           </ul>
                           <p className='m-0 ml-1 text-gray-600 text-xs'>({eachSlide.review_total})</p>
