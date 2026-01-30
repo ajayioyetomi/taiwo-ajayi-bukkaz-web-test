@@ -1,4 +1,25 @@
-# React + TypeScript + Vite
+# Bukkaz Web Developer Test
+
+## Web Application was built using using React and Typescript
+
+## How to Run Application Locally
+
+- Go to the project repo from [here](https://github.com/ajayioyetomi/taiwo-ajayi-bukkaz-web-test.git) or copy and paste "https://github.com/ajayioyetomi/taiwo-ajayi-bukkaz-web-test.git" to your browser.
+
+- Clone the repo to your machine using the command `git clone <git repo link>`.
+- Open the project root directry on a terminal and run the command `npm install` to install all the neccessary modules needed for the project to work sucessfully. 
+- Then run the command `npm run dev` to start the application running locally and open `http://localhost:3000` on your broswer to checkout the project or click [here](http://localhost:3000).
+
+
+## How the Applicaition progress or work (Simulation progress)
+- The application loads it default page which is the login page
+- After about 3 second, the application show a loading screen and the screen runs into an error
+- User is expected to check the `Try Again` button to allow for a try to login
+- The application then log in successfully, show the successful login modal and the redirects to the homepage.
+- User can interact with the homepage or restart the process again by clicking the back button on the browser.
+
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
