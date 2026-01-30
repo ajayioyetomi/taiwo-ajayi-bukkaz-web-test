@@ -28,7 +28,6 @@ type SlideType = {
 }
 
 const positive_rating = [1, 2, 3, 4, 5];
-const negative_rating = [1, 2, 3, 4, 5];
 
 const slides: SlideType[] = [
   {
