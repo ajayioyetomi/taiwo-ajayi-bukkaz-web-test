@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import {Login, Home} from '../views';
+import { ProtectedRoutes } from '.';
 import {PopUpProvider} from '../contexts'
 
 const AppRouter = () => {
@@ -7,8 +8,10 @@ const AppRouter = () => {
     <PopUpProvider>
       <Routes>
           <Route path='/' element={<Login />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/Home' element={<Home />} />
+          <Route path='/login' element={<Login />} /> 
+          <Route element={<ProtectedRoutes />}>
+            <Route path='/Home' element={<Home />} />
+          </Route>
       </Routes>
     </PopUpProvider>
   )

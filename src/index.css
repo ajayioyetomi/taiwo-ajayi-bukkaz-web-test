@@ -6,6 +6,10 @@
   --color-black:#000000;
   --color-white:#FFFFFF;
   --color-blue-100: #CEC4FC;
+  --color-gray-600: #E8E8E8;
+  --color-gray-500: #333333;
+  --gradient: linear-gradient(93.67deg, #6142F6 0%, #9C2BDC 66.29%, #FF2468 100%);
+  --rate-gradient: linear-gradient(180deg, #CEC4FC 0%, #D7C1F8 50%, #FFBBD0 100%);
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -52,21 +56,34 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --gradient: linear-gradient(93.67deg, #6142F6 0%, #9C2BDC 66.29%, #FF2468 100%);
+  --rate-gradient: linear-gradient(180deg, #CEC4FC 0%, #D7C1F8 50%, #FFBBD0 100%);
+
+
 }
 
 
-body {
+body{
   margin: 0;
   padding: 0;
   background-color: var(--color-black);
   overflow: clip auto;
 }
 
-body::-webkit-scrollbar{
-  width:0;
-  height: 0;
+body::-webkit-scrollbar, .main-scroll::-webkit-scrollbar{
+  width:0 !important;
+  height: 0 !important;
 }
 
+.rate-gradient{
+  background: var(--rate-gradient);
+}
+
+.gradient{
+  background-color: var(--color-white);
+  background-image: var(--gradient);
+}
 
 .zoom-in-out {
     animation: zoom_in_out 0.7s ease-in-out forwards;
@@ -81,6 +98,51 @@ button,a{
   cursor: pointer;
 }
 
+.banner-swiper{
+  & .swiper-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-inline: 2rem;
+    gap:.2rem;
+  }
+  & .swiper-pagination-bullet{
+    width:10px;
+    height:10px;
+    background-color: var(--color-white);
+    border-radius: 5px;
+    opacity: 1;
+    margin:0 !important;   
+    transition:  all .2s; 
+  }
+  & .swiper-pagination-bullet-active{
+    width:53px !important;
+    background: var(--gradient);
+
+  }
+}
+
+.banner-genre-list{
+  & li:not(:last-of-type)::after{
+    content:"";
+    width:5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    align-self: center;
+    position: relative;
+    bottom: -3px;
+  }
+}
+
+.inner-div{
+  max-width: calc(100dvw - 100px) !important;
+  width:calc(100dvw - 100px)
+}
+
+.recommended-div .swiper{
+  overflow:visible !important;
+}
 
 @keyframes zoom_in_out {
     0% {

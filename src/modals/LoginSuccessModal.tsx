@@ -1,6 +1,7 @@
 import SuccessIcon from '../assets/successful-icon.svg?react';
 
 const SuccessfulModal = () => {
+  localStorage.setItem('token','success');
   return (
     <div className="flex gap-1 flex-col items-center justify-center">
       <SuccessIcon />
