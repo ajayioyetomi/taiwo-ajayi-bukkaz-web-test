@@ -65,10 +65,11 @@ const PopUpProvider = ({children}: PopUpChildren) => {
                 open ?
                 <div className='fixed top-0 left-0 w-screen h-screen flex justify-center items-end sm:items-center '>
                     <span onClick={ !is_loading? closePopUp :()=>{}} className='absolute top-0 left-0 z-2 w-screen h-screen bg-black opacity-70'></span>
-                  { <div className={`z-3 w-fit h-fit origin-center zoom-in-out`}>
-                        {popup}
-                    </div> 
-									}
+                    { open ? <div className={`z-3 w-fit h-fit origin-center zoom-in-out`}>
+                          {popup}
+                      </div>:
+                      <></>
+                    }
                 </div>:
                 <></>
                 }

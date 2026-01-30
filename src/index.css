@@ -76,6 +76,11 @@ body::-webkit-scrollbar{
   animation: rotate 1.5s linear infinite forwards;
 }
 
+button,a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 @keyframes zoom_in_out {
     0% {

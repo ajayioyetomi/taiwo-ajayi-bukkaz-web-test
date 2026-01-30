@@ -1,15 +1,23 @@
 import { useEffect } from "react";
 import Logo from "../assets/logo.svg?react";
-import {Loading} from '../modals';
+import {Loading, LoginErrorModal} from '../modals';
 import { usePopup } from "../hooks/usePopup";
 const Login = () => {
   const {setPopUp, setOpen} = usePopup();
   useEffect(()=>{
-    let simulate_loading = setTimeout(()=>{
+
+    let start_loading = setTimeout(()=>{
       setPopUp(<Loading message="Waiting for confirmation on your phone" />, false);
       setOpen(true);
-      clearTimeout(simulate_loading);
+      clearTimeout(start_loading);
+      const show_error = setTimeout(()=>{
+        setOpen(false);
+        setPopUp(<LoginErrorModal />, false);
+        setOpen(true);
+        clearTimeout(show_error)
+      },3000)
     },3000)
+
   },[])
 
   return (
@@ -38,7 +46,7 @@ const Login = () => {
           </ol>
         </div>
         <div className="flex flex-col items-center sm:items-flex-start">
-          <img src="./assets/qr-code.webp" className="aspect-[1/1]" alt="QR Code" width="267" />
+          <img src="./assets/qr-code.webp" className="aspect-square" alt="QR Code" width="267" />
           <p className="text-center m-0 mt-4">Scan to sign in</p>
         </div>
       </section>

@@ -1,7 +1,7 @@
 import LoadingIcon from '../assets/loading-icon.svg?react';
 
 type LoadingType = {
-    message: string;
+    message?: string;
 }
 
 const Loading = ({ message="Please wait"}: LoadingType) => {
